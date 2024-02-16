@@ -1,0 +1,1030 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		557DA58823EDE10436B1761E /* Pods_iOS__Photo_CropperTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C38D24A5DF1C89DF64E086 /* Pods_iOS__Photo_CropperTests.framework */; };
+		CE6272BE2B7EA12A00439B40 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6272BD2B7EA12A00439B40 /* UIImage.swift */; };
+		CE6272C22B7EA1B400439B40 /* CropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6272C12B7EA1B400439B40 /* CropViewController.swift */; };
+		CE6273022B7EF06A00439B40 /* OpenAPIRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = CE6273012B7EF06A00439B40 /* OpenAPIRuntime */; };
+		CE6273052B7EF07300439B40 /* OpenAPIURLSession in Frameworks */ = {isa = PBXBuildFile; productRef = CE6273042B7EF07300439B40 /* OpenAPIURLSession */; };
+		CE6273072B7EF0EA00439B40 /* openapi.yaml in Resources */ = {isa = PBXBuildFile; fileRef = CE6273062B7EF0EA00439B40 /* openapi.yaml */; };
+		CE6273092B7EF11B00439B40 /* openapi-generator-config.yaml in Resources */ = {isa = PBXBuildFile; fileRef = CE6273082B7EF11B00439B40 /* openapi-generator-config.yaml */; };
+		CE6273112B7EF64B00439B40 /* RoomVUClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6273102B7EF64B00439B40 /* RoomVUClient.swift */; };
+		CE62731E2B7F279B00439B40 /* DeepLabV3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CE62731D2B7F279B00439B40 /* DeepLabV3.mlmodel */; };
+		CE62732E2B7F365000439B40 /* BackgroundRemoval in Frameworks */ = {isa = PBXBuildFile; productRef = CE62732D2B7F365000439B40 /* BackgroundRemoval */; };
+		CE6273332B7F38F800439B40 /* CameraCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6273322B7F38F800439B40 /* CameraCollectionViewCell.swift */; };
+		CE6273362B7F390A00439B40 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6273352B7F390A00439B40 /* ImageCollectionViewCell.swift */; };
+		CE6273382B7F393B00439B40 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6273372B7F393B00439B40 /* ProfileViewController.swift */; };
+		CE62733A2B7F395400439B40 /* PhotoSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6273392B7F395400439B40 /* PhotoSelectorViewController.swift */; };
+		CE62733D2B7F469D00439B40 /* UIcolor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE62733C2B7F469D00439B40 /* UIcolor.swift */; };
+		CE6273402B7FC75600439B40 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE62733F2B7FC75600439B40 /* ProgressViewController.swift */; };
+		CE9715902B7D3AEE002C6CD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE97158F2B7D3AEE002C6CD0 /* AppDelegate.swift */; };
+		CE9715922B7D3AEE002C6CD0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9715912B7D3AEE002C6CD0 /* SceneDelegate.swift */; };
+		CE9715942B7D3AEE002C6CD0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9715932B7D3AEE002C6CD0 /* ViewController.swift */; };
+		CE9715972B7D3AEE002C6CD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9715952B7D3AEE002C6CD0 /* Main.storyboard */; };
+		CE9715992B7D3AF0002C6CD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9715982B7D3AF0002C6CD0 /* Assets.xcassets */; };
+		CE97159C2B7D3AF0002C6CD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE97159A2B7D3AF0002C6CD0 /* LaunchScreen.storyboard */; };
+		CE9715A72B7D3AF1002C6CD0 /* iOS__Photo_CropperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9715A62B7D3AF1002C6CD0 /* iOS__Photo_CropperTests.swift */; };
+		CE9715B12B7D3AF1002C6CD0 /* iOS__Photo_CropperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9715B02B7D3AF1002C6CD0 /* iOS__Photo_CropperUITests.swift */; };
+		CE9715B32B7D3AF1002C6CD0 /* iOS__Photo_CropperUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9715B22B7D3AF1002C6CD0 /* iOS__Photo_CropperUITestsLaunchTests.swift */; };
+		CE9715C12B7D760B002C6CD0 /* Inter-VariableFont_slnt,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE9715C02B7D760B002C6CD0 /* Inter-VariableFont_slnt,wght.ttf */; };
+		CE9715CC2B7D7618002C6CD0 /* Inter-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE9715C32B7D7617002C6CD0 /* Inter-Black.ttf */; };
+		CE9715CE2B7D7618002C6CD0 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE9715C42B7D7617002C6CD0 /* Inter-Bold.ttf */; };
+		CE9715D02B7D7618002C6CD0 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE9715C52B7D7617002C6CD0 /* Inter-SemiBold.ttf */; };
+		CE9715D22B7D7618002C6CD0 /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE9715C62B7D7617002C6CD0 /* Inter-ExtraBold.ttf */; };
+		CE9715D42B7D7618002C6CD0 /* Inter-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE9715C72B7D7617002C6CD0 /* Inter-ExtraLight.ttf */; };
+		CE9715D62B7D7618002C6CD0 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE9715C82B7D7617002C6CD0 /* Inter-Medium.ttf */; };
+		CE9715D82B7D7618002C6CD0 /* Inter-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE9715C92B7D7617002C6CD0 /* Inter-Light.ttf */; };
+		CE9715DA2B7D7618002C6CD0 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE9715CA2B7D7618002C6CD0 /* Inter-Regular.ttf */; };
+		CE9715DC2B7D7618002C6CD0 /* Inter-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE9715CB2B7D7618002C6CD0 /* Inter-Thin.ttf */; };
+		CE9715E12B7D7945002C6CD0 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9715E02B7D7945002C6CD0 /* UIFont.swift */; };
+		CE9715E22B7D7945002C6CD0 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9715E02B7D7945002C6CD0 /* UIFont.swift */; };
+		D64DAFABC4DB46914B5D677D /* Pods_iOS__Photo_Cropper_iOS__Photo_CropperUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A458EB39872AFB32920E4640 /* Pods_iOS__Photo_Cropper_iOS__Photo_CropperUITests.framework */; };
+		DA6C64885D5F0DEC71A3F935 /* Pods_iOS__Photo_Cropper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D939B5B305485D34DCE0DEC /* Pods_iOS__Photo_Cropper.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE9715A32B7D3AF1002C6CD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE9715842B7D3AEE002C6CD0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE97158B2B7D3AEE002C6CD0;
+			remoteInfo = "iOS _Photo Cropper";
+		};
+		CE9715AD2B7D3AF1002C6CD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE9715842B7D3AEE002C6CD0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE97158B2B7D3AEE002C6CD0;
+			remoteInfo = "iOS _Photo Cropper";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CE9716052B7E734C002C6CD0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		30C38D24A5DF1C89DF64E086 /* Pods_iOS__Photo_CropperTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS__Photo_CropperTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BE9776DE90900024659163B /* Pods-iOS _Photo Cropper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS _Photo Cropper.release.xcconfig"; path = "Target Support Files/Pods-iOS _Photo Cropper/Pods-iOS _Photo Cropper.release.xcconfig"; sourceTree = "<group>"; };
+		6D939B5B305485D34DCE0DEC /* Pods_iOS__Photo_Cropper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS__Photo_Cropper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		849E26ECC77906ECBB4550F5 /* Pods-iOS _Photo Cropper-iOS _Photo CropperUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS _Photo Cropper-iOS _Photo CropperUITests.debug.xcconfig"; path = "Target Support Files/Pods-iOS _Photo Cropper-iOS _Photo CropperUITests/Pods-iOS _Photo Cropper-iOS _Photo CropperUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8600568104517508F21FD541 /* Pods-iOS _Photo CropperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS _Photo CropperTests.debug.xcconfig"; path = "Target Support Files/Pods-iOS _Photo CropperTests/Pods-iOS _Photo CropperTests.debug.xcconfig"; sourceTree = "<group>"; };
+		88321FA6653595CF071B6267 /* Pods-iOS _Photo CropperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS _Photo CropperTests.release.xcconfig"; path = "Target Support Files/Pods-iOS _Photo CropperTests/Pods-iOS _Photo CropperTests.release.xcconfig"; sourceTree = "<group>"; };
+		9380EF736657607E641E5901 /* Pods-iOS _Photo Cropper-iOS _Photo CropperUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS _Photo Cropper-iOS _Photo CropperUITests.release.xcconfig"; path = "Target Support Files/Pods-iOS _Photo Cropper-iOS _Photo CropperUITests/Pods-iOS _Photo Cropper-iOS _Photo CropperUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9868E42E4FAC8A7618042199 /* Pods-iOS _Photo Cropper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS _Photo Cropper.debug.xcconfig"; path = "Target Support Files/Pods-iOS _Photo Cropper/Pods-iOS _Photo Cropper.debug.xcconfig"; sourceTree = "<group>"; };
+		A458EB39872AFB32920E4640 /* Pods_iOS__Photo_Cropper_iOS__Photo_CropperUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS__Photo_Cropper_iOS__Photo_CropperUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE6272BD2B7EA12A00439B40 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		CE6272C12B7EA1B400439B40 /* CropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropViewController.swift; sourceTree = "<group>"; };
+		CE6273062B7EF0EA00439B40 /* openapi.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = openapi.yaml; sourceTree = "<group>"; };
+		CE6273082B7EF11B00439B40 /* openapi-generator-config.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = "openapi-generator-config.yaml"; sourceTree = "<group>"; };
+		CE6273102B7EF64B00439B40 /* RoomVUClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomVUClient.swift; sourceTree = "<group>"; };
+		CE62731D2B7F279B00439B40 /* DeepLabV3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DeepLabV3.mlmodel; sourceTree = "<group>"; };
+		CE6273322B7F38F800439B40 /* CameraCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraCollectionViewCell.swift; sourceTree = "<group>"; };
+		CE6273352B7F390A00439B40 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		CE6273372B7F393B00439B40 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		CE6273392B7F395400439B40 /* PhotoSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSelectorViewController.swift; sourceTree = "<group>"; };
+		CE62733C2B7F469D00439B40 /* UIcolor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIcolor.swift; sourceTree = "<group>"; };
+		CE62733F2B7FC75600439B40 /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
+		CE97158C2B7D3AEE002C6CD0 /* iOS _Photo Cropper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS _Photo Cropper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE97158F2B7D3AEE002C6CD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CE9715912B7D3AEE002C6CD0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CE9715932B7D3AEE002C6CD0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE9715962B7D3AEE002C6CD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CE9715982B7D3AF0002C6CD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE97159B2B7D3AF0002C6CD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CE97159D2B7D3AF0002C6CD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE9715A22B7D3AF1002C6CD0 /* iOS _Photo CropperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS _Photo CropperTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE9715A62B7D3AF1002C6CD0 /* iOS__Photo_CropperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS__Photo_CropperTests.swift; sourceTree = "<group>"; };
+		CE9715AC2B7D3AF1002C6CD0 /* iOS _Photo CropperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS _Photo CropperUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE9715B02B7D3AF1002C6CD0 /* iOS__Photo_CropperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS__Photo_CropperUITests.swift; sourceTree = "<group>"; };
+		CE9715B22B7D3AF1002C6CD0 /* iOS__Photo_CropperUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS__Photo_CropperUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CE9715C02B7D760B002C6CD0 /* Inter-VariableFont_slnt,wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-VariableFont_slnt,wght.ttf"; sourceTree = "<group>"; };
+		CE9715C32B7D7617002C6CD0 /* Inter-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Black.ttf"; sourceTree = "<group>"; };
+		CE9715C42B7D7617002C6CD0 /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
+		CE9715C52B7D7617002C6CD0 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
+		CE9715C62B7D7617002C6CD0 /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraBold.ttf"; sourceTree = "<group>"; };
+		CE9715C72B7D7617002C6CD0 /* Inter-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraLight.ttf"; sourceTree = "<group>"; };
+		CE9715C82B7D7617002C6CD0 /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
+		CE9715C92B7D7617002C6CD0 /* Inter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.ttf"; sourceTree = "<group>"; };
+		CE9715CA2B7D7618002C6CD0 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
+		CE9715CB2B7D7618002C6CD0 /* Inter-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Thin.ttf"; sourceTree = "<group>"; };
+		CE9715E02B7D7945002C6CD0 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE9715892B7D3AEE002C6CD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE6273022B7EF06A00439B40 /* OpenAPIRuntime in Frameworks */,
+				CE6273052B7EF07300439B40 /* OpenAPIURLSession in Frameworks */,
+				DA6C64885D5F0DEC71A3F935 /* Pods_iOS__Photo_Cropper.framework in Frameworks */,
+				CE62732E2B7F365000439B40 /* BackgroundRemoval in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE97159F2B7D3AF1002C6CD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				557DA58823EDE10436B1761E /* Pods_iOS__Photo_CropperTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE9715A92B7D3AF1002C6CD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D64DAFABC4DB46914B5D677D /* Pods_iOS__Photo_Cropper_iOS__Photo_CropperUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		22B8920EF66C8C9CD2B8AA88 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6D939B5B305485D34DCE0DEC /* Pods_iOS__Photo_Cropper.framework */,
+				A458EB39872AFB32920E4640 /* Pods_iOS__Photo_Cropper_iOS__Photo_CropperUITests.framework */,
+				30C38D24A5DF1C89DF64E086 /* Pods_iOS__Photo_CropperTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		29F9B5164FBDB0417F598703 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9868E42E4FAC8A7618042199 /* Pods-iOS _Photo Cropper.debug.xcconfig */,
+				6BE9776DE90900024659163B /* Pods-iOS _Photo Cropper.release.xcconfig */,
+				849E26ECC77906ECBB4550F5 /* Pods-iOS _Photo Cropper-iOS _Photo CropperUITests.debug.xcconfig */,
+				9380EF736657607E641E5901 /* Pods-iOS _Photo Cropper-iOS _Photo CropperUITests.release.xcconfig */,
+				8600568104517508F21FD541 /* Pods-iOS _Photo CropperTests.debug.xcconfig */,
+				88321FA6653595CF071B6267 /* Pods-iOS _Photo CropperTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CE6272C02B7EA1A300439B40 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE6272C12B7EA1B400439B40 /* CropViewController.swift */,
+				CE6273372B7F393B00439B40 /* ProfileViewController.swift */,
+				CE6273392B7F395400439B40 /* PhotoSelectorViewController.swift */,
+				CE62733F2B7FC75600439B40 /* ProgressViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE62730F2B7EF63400439B40 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		CE6273312B7F38DE00439B40 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CE6273322B7F38F800439B40 /* CameraCollectionViewCell.swift */,
+				CE6273352B7F390A00439B40 /* ImageCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		CE9715832B7D3AEE002C6CD0 = {
+			isa = PBXGroup;
+			children = (
+				CE97158E2B7D3AEE002C6CD0 /* iOS _Photo Cropper */,
+				CE9715A52B7D3AF1002C6CD0 /* iOS _Photo CropperTests */,
+				CE9715AF2B7D3AF1002C6CD0 /* iOS _Photo CropperUITests */,
+				CE97158D2B7D3AEE002C6CD0 /* Products */,
+				29F9B5164FBDB0417F598703 /* Pods */,
+				22B8920EF66C8C9CD2B8AA88 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CE97158D2B7D3AEE002C6CD0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE97158C2B7D3AEE002C6CD0 /* iOS _Photo Cropper.app */,
+				CE9715A22B7D3AF1002C6CD0 /* iOS _Photo CropperTests.xctest */,
+				CE9715AC2B7D3AF1002C6CD0 /* iOS _Photo CropperUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE97158E2B7D3AEE002C6CD0 /* iOS _Photo Cropper */ = {
+			isa = PBXGroup;
+			children = (
+				CE9715BF2B7D75F3002C6CD0 /* Font */,
+				CE9715DF2B7D7933002C6CD0 /* Extension */,
+				CE97167F2B7E8860002C6CD0 /* Yml */,
+				CE62730F2B7EF63400439B40 /* Network */,
+				CE6273312B7F38DE00439B40 /* Cell */,
+				CE6272C02B7EA1A300439B40 /* View */,
+				CE97158F2B7D3AEE002C6CD0 /* AppDelegate.swift */,
+				CE9715912B7D3AEE002C6CD0 /* SceneDelegate.swift */,
+				CE9715932B7D3AEE002C6CD0 /* ViewController.swift */,
+				CE9715952B7D3AEE002C6CD0 /* Main.storyboard */,
+				CE9715982B7D3AF0002C6CD0 /* Assets.xcassets */,
+				CE97159A2B7D3AF0002C6CD0 /* LaunchScreen.storyboard */,
+				CE97159D2B7D3AF0002C6CD0 /* Info.plist */,
+			);
+			path = "iOS _Photo Cropper";
+			sourceTree = "<group>";
+		};
+		CE9715A52B7D3AF1002C6CD0 /* iOS _Photo CropperTests */ = {
+			isa = PBXGroup;
+			children = (
+				CE9715A62B7D3AF1002C6CD0 /* iOS__Photo_CropperTests.swift */,
+			);
+			path = "iOS _Photo CropperTests";
+			sourceTree = "<group>";
+		};
+		CE9715AF2B7D3AF1002C6CD0 /* iOS _Photo CropperUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CE9715B02B7D3AF1002C6CD0 /* iOS__Photo_CropperUITests.swift */,
+				CE9715B22B7D3AF1002C6CD0 /* iOS__Photo_CropperUITestsLaunchTests.swift */,
+			);
+			path = "iOS _Photo CropperUITests";
+			sourceTree = "<group>";
+		};
+		CE9715BF2B7D75F3002C6CD0 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				CE9715C02B7D760B002C6CD0 /* Inter-VariableFont_slnt,wght.ttf */,
+				CE9715C32B7D7617002C6CD0 /* Inter-Black.ttf */,
+				CE9715C42B7D7617002C6CD0 /* Inter-Bold.ttf */,
+				CE9715C62B7D7617002C6CD0 /* Inter-ExtraBold.ttf */,
+				CE9715C72B7D7617002C6CD0 /* Inter-ExtraLight.ttf */,
+				CE9715C92B7D7617002C6CD0 /* Inter-Light.ttf */,
+				CE9715C82B7D7617002C6CD0 /* Inter-Medium.ttf */,
+				CE9715CA2B7D7618002C6CD0 /* Inter-Regular.ttf */,
+				CE9715C52B7D7617002C6CD0 /* Inter-SemiBold.ttf */,
+				CE9715CB2B7D7618002C6CD0 /* Inter-Thin.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		CE9715DF2B7D7933002C6CD0 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CE62731D2B7F279B00439B40 /* DeepLabV3.mlmodel */,
+				CE9715E02B7D7945002C6CD0 /* UIFont.swift */,
+				CE6272BD2B7EA12A00439B40 /* UIImage.swift */,
+				CE62733C2B7F469D00439B40 /* UIcolor.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		CE97167F2B7E8860002C6CD0 /* Yml */ = {
+			isa = PBXGroup;
+			children = (
+				CE6273082B7EF11B00439B40 /* openapi-generator-config.yaml */,
+				CE6273062B7EF0EA00439B40 /* openapi.yaml */,
+				CE6273102B7EF64B00439B40 /* RoomVUClient.swift */,
+			);
+			path = Yml;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE97158B2B7D3AEE002C6CD0 /* iOS _Photo Cropper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE9715B62B7D3AF1002C6CD0 /* Build configuration list for PBXNativeTarget "iOS _Photo Cropper" */;
+			buildPhases = (
+				68FE641191577A2320E2E9F9 /* [CP] Check Pods Manifest.lock */,
+				CE9715882B7D3AEE002C6CD0 /* Sources */,
+				CE9715892B7D3AEE002C6CD0 /* Frameworks */,
+				CE97158A2B7D3AEE002C6CD0 /* Resources */,
+				CE9716052B7E734C002C6CD0 /* Embed Frameworks */,
+				F17507CDA050063943AFD1EF /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE62730B2B7EF16300439B40 /* PBXTargetDependency */,
+			);
+			name = "iOS _Photo Cropper";
+			packageProductDependencies = (
+				CE6273012B7EF06A00439B40 /* OpenAPIRuntime */,
+				CE6273042B7EF07300439B40 /* OpenAPIURLSession */,
+				CE62732D2B7F365000439B40 /* BackgroundRemoval */,
+			);
+			productName = "iOS _Photo Cropper";
+			productReference = CE97158C2B7D3AEE002C6CD0 /* iOS _Photo Cropper.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CE9715A12B7D3AF1002C6CD0 /* iOS _Photo CropperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE9715B92B7D3AF1002C6CD0 /* Build configuration list for PBXNativeTarget "iOS _Photo CropperTests" */;
+			buildPhases = (
+				CF3D0F604B07219FB459D8AB /* [CP] Check Pods Manifest.lock */,
+				CE97159E2B7D3AF1002C6CD0 /* Sources */,
+				CE97159F2B7D3AF1002C6CD0 /* Frameworks */,
+				CE9715A02B7D3AF1002C6CD0 /* Resources */,
+				98829149239EA967AE954F6C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE9715A42B7D3AF1002C6CD0 /* PBXTargetDependency */,
+			);
+			name = "iOS _Photo CropperTests";
+			productName = "iOS _Photo CropperTests";
+			productReference = CE9715A22B7D3AF1002C6CD0 /* iOS _Photo CropperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CE9715AB2B7D3AF1002C6CD0 /* iOS _Photo CropperUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE9715BC2B7D3AF1002C6CD0 /* Build configuration list for PBXNativeTarget "iOS _Photo CropperUITests" */;
+			buildPhases = (
+				59D09D2C724BE17491CFA7E5 /* [CP] Check Pods Manifest.lock */,
+				CE9715A82B7D3AF1002C6CD0 /* Sources */,
+				CE9715A92B7D3AF1002C6CD0 /* Frameworks */,
+				CE9715AA2B7D3AF1002C6CD0 /* Resources */,
+				52816E3E8F20BC5207856579 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE9715AE2B7D3AF1002C6CD0 /* PBXTargetDependency */,
+			);
+			name = "iOS _Photo CropperUITests";
+			productName = "iOS _Photo CropperUITests";
+			productReference = CE9715AC2B7D3AF1002C6CD0 /* iOS _Photo CropperUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE9715842B7D3AEE002C6CD0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					CE97158B2B7D3AEE002C6CD0 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					CE9715A12B7D3AF1002C6CD0 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = CE97158B2B7D3AEE002C6CD0;
+					};
+					CE9715AB2B7D3AF1002C6CD0 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = CE97158B2B7D3AEE002C6CD0;
+					};
+				};
+			};
+			buildConfigurationList = CE9715872B7D3AEE002C6CD0 /* Build configuration list for PBXProject "iOS _Photo Cropper" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CE9715832B7D3AEE002C6CD0;
+			packageReferences = (
+				CE6272FF2B7EF05B00439B40 /* XCRemoteSwiftPackageReference "swift-openapi-generator" */,
+				CE6273002B7EF06A00439B40 /* XCRemoteSwiftPackageReference "swift-openapi-runtime" */,
+				CE6273032B7EF07300439B40 /* XCRemoteSwiftPackageReference "swift-openapi-urlsession" */,
+				CE62732C2B7F365000439B40 /* XCRemoteSwiftPackageReference "BackgroundRemoval" */,
+			);
+			productRefGroup = CE97158D2B7D3AEE002C6CD0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE97158B2B7D3AEE002C6CD0 /* iOS _Photo Cropper */,
+				CE9715A12B7D3AF1002C6CD0 /* iOS _Photo CropperTests */,
+				CE9715AB2B7D3AF1002C6CD0 /* iOS _Photo CropperUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE97158A2B7D3AEE002C6CD0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE9715CE2B7D7618002C6CD0 /* Inter-Bold.ttf in Resources */,
+				CE6273072B7EF0EA00439B40 /* openapi.yaml in Resources */,
+				CE9715C12B7D760B002C6CD0 /* Inter-VariableFont_slnt,wght.ttf in Resources */,
+				CE97159C2B7D3AF0002C6CD0 /* LaunchScreen.storyboard in Resources */,
+				CE9715D22B7D7618002C6CD0 /* Inter-ExtraBold.ttf in Resources */,
+				CE9715CC2B7D7618002C6CD0 /* Inter-Black.ttf in Resources */,
+				CE9715992B7D3AF0002C6CD0 /* Assets.xcassets in Resources */,
+				CE6273092B7EF11B00439B40 /* openapi-generator-config.yaml in Resources */,
+				CE9715972B7D3AEE002C6CD0 /* Main.storyboard in Resources */,
+				CE9715D42B7D7618002C6CD0 /* Inter-ExtraLight.ttf in Resources */,
+				CE9715D82B7D7618002C6CD0 /* Inter-Light.ttf in Resources */,
+				CE9715D62B7D7618002C6CD0 /* Inter-Medium.ttf in Resources */,
+				CE9715DA2B7D7618002C6CD0 /* Inter-Regular.ttf in Resources */,
+				CE9715D02B7D7618002C6CD0 /* Inter-SemiBold.ttf in Resources */,
+				CE9715DC2B7D7618002C6CD0 /* Inter-Thin.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE9715A02B7D3AF1002C6CD0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE9715AA2B7D3AF1002C6CD0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		52816E3E8F20BC5207856579 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOS _Photo Cropper-iOS _Photo CropperUITests/Pods-iOS _Photo Cropper-iOS _Photo CropperUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOS _Photo Cropper-iOS _Photo CropperUITests/Pods-iOS _Photo Cropper-iOS _Photo CropperUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOS _Photo Cropper-iOS _Photo CropperUITests/Pods-iOS _Photo Cropper-iOS _Photo CropperUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		59D09D2C724BE17491CFA7E5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iOS _Photo Cropper-iOS _Photo CropperUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68FE641191577A2320E2E9F9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iOS _Photo Cropper-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98829149239EA967AE954F6C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOS _Photo CropperTests/Pods-iOS _Photo CropperTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOS _Photo CropperTests/Pods-iOS _Photo CropperTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOS _Photo CropperTests/Pods-iOS _Photo CropperTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF3D0F604B07219FB459D8AB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iOS _Photo CropperTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F17507CDA050063943AFD1EF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOS _Photo Cropper/Pods-iOS _Photo Cropper-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOS _Photo Cropper/Pods-iOS _Photo Cropper-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOS _Photo Cropper/Pods-iOS _Photo Cropper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE9715882B7D3AEE002C6CD0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE9715E12B7D7945002C6CD0 /* UIFont.swift in Sources */,
+				CE6272BE2B7EA12A00439B40 /* UIImage.swift in Sources */,
+				CE6273112B7EF64B00439B40 /* RoomVUClient.swift in Sources */,
+				CE6273402B7FC75600439B40 /* ProgressViewController.swift in Sources */,
+				CE6272C22B7EA1B400439B40 /* CropViewController.swift in Sources */,
+				CE9715942B7D3AEE002C6CD0 /* ViewController.swift in Sources */,
+				CE9715902B7D3AEE002C6CD0 /* AppDelegate.swift in Sources */,
+				CE62733A2B7F395400439B40 /* PhotoSelectorViewController.swift in Sources */,
+				CE6273382B7F393B00439B40 /* ProfileViewController.swift in Sources */,
+				CE6273362B7F390A00439B40 /* ImageCollectionViewCell.swift in Sources */,
+				CE6273332B7F38F800439B40 /* CameraCollectionViewCell.swift in Sources */,
+				CE9715922B7D3AEE002C6CD0 /* SceneDelegate.swift in Sources */,
+				CE62733D2B7F469D00439B40 /* UIcolor.swift in Sources */,
+				CE62731E2B7F279B00439B40 /* DeepLabV3.mlmodel in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE97159E2B7D3AF1002C6CD0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE9715E22B7D7945002C6CD0 /* UIFont.swift in Sources */,
+				CE9715A72B7D3AF1002C6CD0 /* iOS__Photo_CropperTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE9715A82B7D3AF1002C6CD0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE9715B12B7D3AF1002C6CD0 /* iOS__Photo_CropperUITests.swift in Sources */,
+				CE9715B32B7D3AF1002C6CD0 /* iOS__Photo_CropperUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE62730B2B7EF16300439B40 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = CE62730A2B7EF16300439B40 /* OpenAPIGenerator */;
+		};
+		CE9715A42B7D3AF1002C6CD0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE97158B2B7D3AEE002C6CD0 /* iOS _Photo Cropper */;
+			targetProxy = CE9715A32B7D3AF1002C6CD0 /* PBXContainerItemProxy */;
+		};
+		CE9715AE2B7D3AF1002C6CD0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE97158B2B7D3AEE002C6CD0 /* iOS _Photo Cropper */;
+			targetProxy = CE9715AD2B7D3AF1002C6CD0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CE9715952B7D3AEE002C6CD0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE9715962B7D3AEE002C6CD0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CE97159A2B7D3AF0002C6CD0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE97159B2B7D3AF0002C6CD0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE9715B42B7D3AF1002C6CD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CE9715B52B7D3AF1002C6CD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE9715B72B7D3AF1002C6CD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9868E42E4FAC8A7618042199 /* Pods-iOS _Photo Cropper.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VZQL275L7V;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS _Photo Cropper/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Sammy.iOS--Photo-Cropper";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		CE9715B82B7D3AF1002C6CD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BE9776DE90900024659163B /* Pods-iOS _Photo Cropper.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VZQL275L7V;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS _Photo Cropper/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Sammy.iOS--Photo-Cropper";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		CE9715BA2B7D3AF1002C6CD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8600568104517508F21FD541 /* Pods-iOS _Photo CropperTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VZQL275L7V;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Sammy.iOS--Photo-CropperTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS _Photo Cropper.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/iOS _Photo Cropper";
+			};
+			name = Debug;
+		};
+		CE9715BB2B7D3AF1002C6CD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88321FA6653595CF071B6267 /* Pods-iOS _Photo CropperTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VZQL275L7V;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Sammy.iOS--Photo-CropperTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS _Photo Cropper.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/iOS _Photo Cropper";
+			};
+			name = Release;
+		};
+		CE9715BD2B7D3AF1002C6CD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 849E26ECC77906ECBB4550F5 /* Pods-iOS _Photo Cropper-iOS _Photo CropperUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VZQL275L7V;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Sammy.iOS--Photo-CropperUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "iOS _Photo Cropper";
+			};
+			name = Debug;
+		};
+		CE9715BE2B7D3AF1002C6CD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9380EF736657607E641E5901 /* Pods-iOS _Photo Cropper-iOS _Photo CropperUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VZQL275L7V;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Sammy.iOS--Photo-CropperUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "iOS _Photo Cropper";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE9715872B7D3AEE002C6CD0 /* Build configuration list for PBXProject "iOS _Photo Cropper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE9715B42B7D3AF1002C6CD0 /* Debug */,
+				CE9715B52B7D3AF1002C6CD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE9715B62B7D3AF1002C6CD0 /* Build configuration list for PBXNativeTarget "iOS _Photo Cropper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE9715B72B7D3AF1002C6CD0 /* Debug */,
+				CE9715B82B7D3AF1002C6CD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE9715B92B7D3AF1002C6CD0 /* Build configuration list for PBXNativeTarget "iOS _Photo CropperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE9715BA2B7D3AF1002C6CD0 /* Debug */,
+				CE9715BB2B7D3AF1002C6CD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE9715BC2B7D3AF1002C6CD0 /* Build configuration list for PBXNativeTarget "iOS _Photo CropperUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE9715BD2B7D3AF1002C6CD0 /* Debug */,
+				CE9715BE2B7D3AF1002C6CD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CE6272FF2B7EF05B00439B40 /* XCRemoteSwiftPackageReference "swift-openapi-generator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-openapi-generator";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.2.1;
+			};
+		};
+		CE6273002B7EF06A00439B40 /* XCRemoteSwiftPackageReference "swift-openapi-runtime" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-openapi-runtime";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.3.2;
+			};
+		};
+		CE6273032B7EF07300439B40 /* XCRemoteSwiftPackageReference "swift-openapi-urlsession" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-openapi-urlsession.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.1;
+			};
+		};
+		CE62732C2B7F365000439B40 /* XCRemoteSwiftPackageReference "BackgroundRemoval" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Ezaldeen99/BackgroundRemoval.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CE6273012B7EF06A00439B40 /* OpenAPIRuntime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE6273002B7EF06A00439B40 /* XCRemoteSwiftPackageReference "swift-openapi-runtime" */;
+			productName = OpenAPIRuntime;
+		};
+		CE6273042B7EF07300439B40 /* OpenAPIURLSession */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE6273032B7EF07300439B40 /* XCRemoteSwiftPackageReference "swift-openapi-urlsession" */;
+			productName = OpenAPIURLSession;
+		};
+		CE62730A2B7EF16300439B40 /* OpenAPIGenerator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE6272FF2B7EF05B00439B40 /* XCRemoteSwiftPackageReference "swift-openapi-generator" */;
+			productName = "plugin:OpenAPIGenerator";
+		};
+		CE62732D2B7F365000439B40 /* BackgroundRemoval */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE62732C2B7F365000439B40 /* XCRemoteSwiftPackageReference "BackgroundRemoval" */;
+			productName = BackgroundRemoval;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = CE9715842B7D3AEE002C6CD0 /* Project object */;
+}

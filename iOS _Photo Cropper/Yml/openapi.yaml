@@ -1,0 +1,58 @@
+openapi: 3.1.0
+info:
+  version: 1.0.0
+  title: Roomvu V1 API Documentation
+  description: |
+    It's the Roomvu API documentation.
+
+    - [Openapi 3.1.0 documentation](https://spec.openapis.org/oas/v3.1.0)
+
+servers:
+  - url: https://www.roomvu.com/api/v1
+    description: Server
+tags:
+  - name: "UserImage"
+    description: "User Image APIs"
+paths:
+  /agent-dashboard/user-image/enhance:
+    post:
+      summary: Enhance user image
+      tags:
+        - UserImage
+      description: Enhance user image
+      parameters:
+        - in: header
+          name: token
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              required:
+                - image
+              type: object
+              properties:
+                image:
+                  type: string
+                  format: binary
+      responses:
+        "200":
+          description: User enhanced successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    default: "success"
+                  message:
+                    type: string
+                    default: null
+                  data:
+                    type: object
+                    properties:
+                      enhanced_user_image:
+                        type: string

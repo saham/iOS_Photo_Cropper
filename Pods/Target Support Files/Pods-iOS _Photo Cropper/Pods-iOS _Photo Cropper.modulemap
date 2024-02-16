@@ -1,0 +1,6 @@
+framework module Pods_iOS__Photo_Cropper {
+  umbrella header "Pods-iOS _Photo Cropper-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -50,21 +50,17 @@ extension PhotoSelectorViewController: cameraDelegate {
             picker.delegate = self
             picker.allowsEditing = true
             present(picker, animated: true, completion: nil)
-          
         }
     }
 
 }
 extension PhotoSelectorViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-  
-        let info = Dictionary(uniqueKeysWithValues: info.map {key, value in (key.rawValue, value)})
-        
-        var image = info[UIImagePickerController.InfoKey.editedImage.rawValue] as? UIImage
-        if(image == nil){
-            image = info[UIImagePickerController.InfoKey.originalImage.rawValue] as? UIImage
+        if let image = info[.editedImage] as? UIImage {
+            viewModel.append(image)
+        } else if let image = info[.originalImage] as? UIImage {
+            viewModel.append(image)
         }
-        viewModel.append(image!)
         photoCollectionView.reloadData()
         self.dismiss(animated: true)
     }
@@ -80,14 +76,3 @@ extension PhotoSelectorViewController:UICollectionViewDelegateFlowLayout {
         return 0.0
     }
 }
-//func convertFromUIImagePickerControllerInfoKeyDictionary(_ input: [UIImagePickerController.InfoKey: Any]) -> [String: Any] {
-//   return Dictionary(uniqueKeysWithValues: input.map {key, value in (key.rawValue, value)})
-//}
-//
-//func convertFromAVMediaType(_ input: AVMediaType) -> String {
-//   return input.rawValue
-//}
-//
-//func convertFromUIImagePickerControllerInfoKey(_ input: UIImagePickerController.InfoKey) -> String {
-//   return input.rawValue
-//}

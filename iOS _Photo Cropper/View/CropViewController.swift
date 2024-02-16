@@ -50,17 +50,11 @@ class CropViewController: UIViewController {
         super.viewDidLoad()
         profileImageView.image = originaleImage
         sampleMask.layer.mask = getMaskLayer()
-        let PanGesture = UIPanGestureRecognizer(target: self, action: #selector(self.TriangleDragItem(_:)))
-        profileImageView.isUserInteractionEnabled = true
-        profileImageView.addGestureRecognizer(PanGesture)
-       
         topView.backgroundColor = .backgroundGray
         topView.layer.cornerRadius = 3.0
         titleLabel.text = "Edit headshot"
-        titleLabel.text = "Edit headshot"
         titleLabel.textColor = .titleBlack
         titleLabel.font = .CustomFont(weight: .semiBold, size: 18)
-        
         radiusSlider.maximumTrackTintColor = .borderGray
         radiusSlider.minimumTrackTintColor = .themeBlue
         rotateButton.setTitleColor(.buttonBlack, for: [])
@@ -69,7 +63,6 @@ class CropViewController: UIViewController {
         uploadButton.titleLabel?.font = .CustomFont(weight: .semiBold, size: 16)
         uploadButton.setTitle("Upload headshot", for: [])
         uploadButton.layer.cornerRadius = 5
-        
         cancelButton.layer.borderColor = UIColor.buttonBorderGray.cgColor
         cancelButton.layer.borderWidth = 1.0
         cancelButton.backgroundColor = .white
@@ -77,21 +70,12 @@ class CropViewController: UIViewController {
         cancelButton.titleLabel?.font = .CustomFont(weight: .semiBold, size: 16)
         cancelButton.setTitle("Cancel", for: [])
         cancelButton.layer.cornerRadius = 5.0
-        
-        
     }
-    @objc func TriangleDragItem(_ sender:UIPanGestureRecognizer) {
-        let translation = sender.translation(in: self.view)
-        
-        sampleMask.center.x = sampleMask.center.x + translation.x
-        sampleMask.center.y = sampleMask.center.y + translation.y
-        sender.setTranslation(CGPoint.zero, in: self.view)
-    }
+
     func getPath(circleHeight: CGFloat = CGFloat(300))->UIBezierPath {
         let circleRect = CGRect(x:sampleMask.center.x - circleHeight / 2, y:sampleMask.center.y - circleHeight / 2, width: circleHeight, height: circleHeight)
         let circlePath = UIBezierPath(ovalIn: circleRect)
         return circlePath
-        
     }
     
     func getMaskLayer()->CALayer {

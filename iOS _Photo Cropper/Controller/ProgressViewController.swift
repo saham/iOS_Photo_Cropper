@@ -8,12 +8,9 @@ class ProgressViewController: UIViewController {
     @IBOutlet weak var progressImageView: UIImageView!
     @IBOutlet weak var statusLabel: UILabel!
     
-    var imageToUoload:UIImage?
+    var imageToUpload:UIImage?
     var timer = Timer()
-    var startOfRound:Date = Date()
-    var durationFormatter = DateComponentsFormatter()
-    var ThisRoundTime = 0
-    var counter = 0
+    var progressValue = 0
     var removeBackground = false
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,28 +22,26 @@ class ProgressViewController: UIViewController {
         progressSlider.setProgress(0.0, animated: false)
         progressLabel.textColor = .textBlack
         progressLabel.font = .CustomFont(weight: .medium, size: 14)
-        statusLabel.text = "We are currently processing your image. Background remover may take few miniutes."
+        statusLabel.text = "We are currently processing your image. Background remover may take few minutes."
         statusLabel.textColor = .textBlack
         statusLabel.font = .CustomFont(weight: .medium, size: 14)
         timer = Timer.scheduledTimer(timeInterval:0.01, target:self, selector:#selector(timerProgress), userInfo: nil, repeats: true)
-        progressImageView.image = imageToUoload
-        
-        
+        progressImageView.image = imageToUpload
     }
     @objc func timerProgress() {
         /* Just to simulate network delay in removing background
         It takes 1 seconds then background is removed
          */
-        counter += 1
-        if counter == 100 {
+        progressValue += 1
+        if progressValue == 100 {
             timer.invalidate()
-            if removeBackground,let image = imageToUoload {
+            if removeBackground,let image = imageToUpload {
                 progressImageView.image = try? BackgroundRemoval.init().removeBackground(image: image)
             }
         }
         DispatchQueue.main.async {
-            self.progressLabel.text = "% \(self.counter) processed..."
-            self.progressSlider.setProgress(Float(self.counter), animated: true)
+            self.progressLabel.text = "% \(self.progressValue) processed..."
+            self.progressSlider.setProgress(Float(self.progressValue), animated: true)
         }
     }
 }

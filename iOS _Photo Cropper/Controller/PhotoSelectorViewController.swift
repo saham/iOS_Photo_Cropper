@@ -15,6 +15,7 @@ class PhotoSelectorViewController: UIViewController {
     }
 }
 extension PhotoSelectorViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 1 + viewModel.count
     }
@@ -35,15 +36,14 @@ extension PhotoSelectorViewController: UICollectionViewDelegate, UICollectionVie
         guard indexPath.row > 0 else {return}
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let DVC = storyboard.instantiateViewController(withIdentifier: "CropVC") as? CropViewController {
-            DVC.originaleImage = viewModel[indexPath.row - 1]
+            DVC.originalImage = viewModel[indexPath.row - 1]
             navigationController?.pushViewController(DVC, animated: true)
         }
         
     }
 }
 extension PhotoSelectorViewController: cameraDelegate {
-    
-    func buttonPressed() {
+    func cameraButtonPressed() {
         if UIImagePickerController.isSourceTypeAvailable(.camera){
             let picker = UIImagePickerController()
             picker.sourceType = .photoLibrary

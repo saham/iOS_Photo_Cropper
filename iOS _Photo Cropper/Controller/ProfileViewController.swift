@@ -14,7 +14,7 @@ class ProfileViewController: UIViewController {
         if let NVC = storyboard.instantiateViewController(withIdentifier: "CropNVC") as? UINavigationController,
            let DVC = NVC.topViewController as? CropViewController {
             NVC.modalPresentationStyle = .fullScreen
-            DVC.originaleImage = profileImageView.image
+            DVC.originalImage = profileImageView.image
             present(NVC, animated: true)
         }
     }
@@ -31,9 +31,9 @@ class ProfileViewController: UIViewController {
         profileImageView.image = UIImage(named: "profileImage")
         profileImageView.layer.cornerRadius = profileImageView.frame.width / 2
         editProfileButton.layer.borderWidth = 1.0
-        editProfileButton.layer.borderColor = UIColor(hex: "#D0D5DD").cgColor
+        editProfileButton.layer.borderColor = UIColor.buttonBorderGray.cgColor
         editProfileButton.layer.cornerRadius = 10.0
-        editProfileButton.setTitleColor(UIColor(hex: "#344054"), for: [])
+        editProfileButton.setTitleColor(.textBlack, for: [])
         nameLabel.font = .CustomFont(fontFamily: .Inter, weight: .bold, size: 18)
         nameLabel.textColor = .nameBlack
         jobLabel.font = .CustomFont(weight: .regular, size: 14)
@@ -50,16 +50,5 @@ class ProfileViewController: UIViewController {
         phoneLabel.textColor = .nameBlack
         
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

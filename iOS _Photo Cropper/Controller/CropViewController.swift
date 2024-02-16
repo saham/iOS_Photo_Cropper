@@ -18,8 +18,8 @@ class CropViewController: UIViewController {
     @IBAction func uploadPressed(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let DVC = storyboard.instantiateViewController(withIdentifier: "ProgressVC") as? ProgressViewController {
-            DVC.imageToUoload = getCroppedImage(from: self.profileImageView.image)
-            DVC.removeBackground = removeBacground
+            DVC.imageToUpload = getCroppedImage(from: self.profileImageView.image)
+            DVC.removeBackground = removeBackground
             navigationController?.pushViewController(DVC, animated: true)
         }
     }
@@ -40,18 +40,18 @@ class CropViewController: UIViewController {
     
     
     @IBAction func removeBackgroundSwitch(_ sender: UISwitch) {
-        removeBacground = sender.isOn
+        removeBackground = sender.isOn
     }
     var circleHeight = CGFloat(300)
-    var originaleImage: UIImage?
+    var originalImage: UIImage?
     let sampleMask = UIView()
-    var removeBacground = false
+    var removeBackground = false
     override func viewDidLoad() {
         super.viewDidLoad()
-        profileImageView.image = originaleImage
+        profileImageView.image = originalImage
         sampleMask.layer.mask = getMaskLayer()
         topView.backgroundColor = .backgroundGray
-        topView.layer.cornerRadius = 3.0
+        topView.layer.cornerRadius = 8.0
         titleLabel.text = "Edit headshot"
         titleLabel.textColor = .titleBlack
         titleLabel.font = .CustomFont(weight: .semiBold, size: 18)
@@ -62,14 +62,14 @@ class CropViewController: UIViewController {
         uploadButton.setTitleColor(.white, for: [])
         uploadButton.titleLabel?.font = .CustomFont(weight: .semiBold, size: 16)
         uploadButton.setTitle("Upload headshot", for: [])
-        uploadButton.layer.cornerRadius = 5
+        uploadButton.layer.cornerRadius = 8.0
         cancelButton.layer.borderColor = UIColor.buttonBorderGray.cgColor
         cancelButton.layer.borderWidth = 1.0
         cancelButton.backgroundColor = .white
         cancelButton.setTitleColor(.textBlack, for: [])
         cancelButton.titleLabel?.font = .CustomFont(weight: .semiBold, size: 16)
         cancelButton.setTitle("Cancel", for: [])
-        cancelButton.layer.cornerRadius = 5.0
+        cancelButton.layer.cornerRadius = 8.0
     }
 
     func getPath(circleHeight: CGFloat = CGFloat(300))->UIBezierPath {
@@ -84,9 +84,9 @@ class CropViewController: UIViewController {
         self.profileImageView.addSubview(sampleMask)
         let maskLayer = CALayer()
         let circleLayer = CAShapeLayer()
-        let finalPath = UIBezierPath(roundedRect: CGRect(x:0 , y:0,width: sampleMask.frame.size.width,height: sampleMask.frame.size.height), cornerRadius: 0)
+        let finalPath = UIBezierPath(roundedRect: CGRect(x:0 , y:0, width: sampleMask.frame.size.width,height: sampleMask.frame.size.height), cornerRadius: 0)
         maskLayer.frame = sampleMask.bounds
-        circleLayer.frame = CGRect(x:0 , y:0,width: sampleMask.frame.size.width,height: sampleMask.frame.size.height)
+        circleLayer.frame = CGRect(x:0 , y:0, width: sampleMask.frame.size.width,height: sampleMask.frame.size.height)
         let circlePath = getPath(circleHeight: circleHeight)
         finalPath.append(circlePath.reversing())
         circleLayer.path = finalPath.cgPath
@@ -96,8 +96,8 @@ class CropViewController: UIViewController {
         return maskLayer
     }
     func getCroppedImage(from image:UIImage?)->UIImage? {
-        let croAreadRect = CGRect(x:sampleMask.center.x - circleHeight / 2, y:sampleMask.center.y - circleHeight / 2, width: circleHeight, height: circleHeight)
-        if let croppedCGImage = profileImageView.image?.cgImage?.cropping(to: croAreadRect){
+        let cropRect = CGRect(x:sampleMask.center.x - circleHeight / 2, y:sampleMask.center.y - circleHeight / 2, width: circleHeight, height: circleHeight)
+        if let croppedCGImage = profileImageView.image?.cgImage?.cropping(to: cropRect){
             return UIImage(cgImage: croppedCGImage)
         }
         return nil

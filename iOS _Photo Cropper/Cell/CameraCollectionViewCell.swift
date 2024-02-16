@@ -1,11 +1,11 @@
 import UIKit
 protocol cameraDelegate {
-    func buttonPressed()
+    func cameraButtonPressed()
 }
 class CameraCollectionViewCell: UICollectionViewCell {
     var delegate:cameraDelegate?
     @IBAction func cameraPressed(_ sender: UIButton) {
-        delegate?.buttonPressed()
+        delegate?.cameraButtonPressed()
     }
     
 }

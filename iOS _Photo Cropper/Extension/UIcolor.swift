@@ -59,6 +59,4 @@ extension UIColor {
     static var buttonBorderGray: UIColor {
         return UIColor(hex: "#D0D5DD")
     }
-    
-    //
 }

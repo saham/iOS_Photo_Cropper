@@ -1,4 +1,4 @@
-# Speer Technologies iOS assessment
+# RoomVU iOS assessment
 
 ## Assumption
 1. There was an issue in openapi.yaml and I created a local JSON file.

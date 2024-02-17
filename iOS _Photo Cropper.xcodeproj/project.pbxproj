@@ -236,11 +236,11 @@
 				CE6272C02B7EA1A300439B40 /* Controller */,
 				CE9715DF2B7D7933002C6CD0 /* Extension */,
 				CE9715BF2B7D75F3002C6CD0 /* Font */,
-				CE97159D2B7D3AF0002C6CD0 /* Info.plist */,
 				CECC8D7F2B804E120027065D /* Model */,
 				CECC8D802B804E280027065D /* Resource */,
 				CECC8D7B2B80117E0027065D /* View */,
 				CE97167F2B7E8860002C6CD0 /* Yml */,
+				CE97159D2B7D3AF0002C6CD0 /* Info.plist */,
 			);
 			path = "iOS _Photo Cropper";
 			sourceTree = "<group>";

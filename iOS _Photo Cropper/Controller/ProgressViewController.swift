@@ -19,6 +19,11 @@ class ProgressViewController: UIViewController {
     // MARK: - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
+    }
+
+    // MARK: - UI
+    func setupUI() {
         titleLabel.textColor = .textBlack
         titleLabel.font = .CustomFont(weight: .bold, size: 18)
         titleLabel.text = "Take a sip.."
@@ -33,7 +38,7 @@ class ProgressViewController: UIViewController {
         timer = Timer.scheduledTimer(timeInterval:0.01, target:self, selector:#selector(timerProgress), userInfo: nil, repeats: true)
         progressImageView.image = imageToUpload
     }
-
+    
     // MARK: - Timer
     @objc func timerProgress() {
         /* Just to simulate network delay in removing background

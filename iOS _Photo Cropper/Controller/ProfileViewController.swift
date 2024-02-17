@@ -13,7 +13,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var membershipLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
-    
+    @IBOutlet weak var premiumButton: UIButton!
     // MARK: - Actions
     @IBAction func editProfilePressed(_ sender: UIButton) {
         let storyboard  = StoryboardFactory.Main
@@ -38,7 +38,17 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         user = getUser()
         setUserInfo(user: user)
+        setupUI()
+    }
+    
+    // MARK: - UI
+    func setupUI() {
         profileImageView.isCircle = true
+        premiumButton.backgroundColor = .buttonLightBlue
+        premiumButton.setTitleColor(.buttonDarkBlue, for: [])
+        premiumButton.layer.cornerRadius = AppConstant.Number.cornerRadius
+        premiumButton.titleLabel?.font = .CustomFont(weight: .regular, size: 12)
+        premiumButton.clipsToBounds = true
         editProfileButton.layer.borderWidth = AppConstant.Number.borderWidth
         editProfileButton.layer.borderColor = UIColor.buttonBorderGray.cgColor
         editProfileButton.layer.cornerRadius = AppConstant.Number.cornerRadius

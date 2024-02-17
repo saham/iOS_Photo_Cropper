@@ -57,6 +57,11 @@ class CropViewController: UIViewController {
     // MARK: - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
+    }
+    
+    // MARK: -  UI
+    func setupUI() {
         profileImageView.image = originalImage
         sampleMask.layer.mask = getMaskLayer()
         topView.backgroundColor = .backgroundGray
@@ -83,7 +88,6 @@ class CropViewController: UIViewController {
         cancelButton.setTitle("Cancel", for: [])
         cancelButton.layer.cornerRadius = AppConstant.Number.cornerRadius
     }
-    
     // MARK: - Mask Layer
     func getPath(circleHeight: CGFloat) -> UIBezierPath {
         let circleRect = CGRect(x: sampleMask.center.x - circleHeight / 2,

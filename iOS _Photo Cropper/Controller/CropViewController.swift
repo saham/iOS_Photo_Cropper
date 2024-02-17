@@ -16,8 +16,8 @@ class CropViewController: UIViewController {
         sampleMask.layer.mask = getMaskLayer()
     }
     @IBAction func uploadPressed(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let DVC = storyboard.instantiateViewController(withIdentifier: "ProgressVC") as? ProgressViewController {
+        let storyboard = StoryboardFactory.Main
+        if let DVC = storyboard.instantiateViewController(withIdentifier: AppConstant.ViewControllerID.progress) as? ProgressViewController {
             DVC.imageToUpload = getCroppedImage(from: self.profileImageView.image)
             DVC.removeBackground = removeBackground
             navigationController?.pushViewController(DVC, animated: true)

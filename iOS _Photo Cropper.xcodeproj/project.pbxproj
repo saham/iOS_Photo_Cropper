@@ -42,6 +42,10 @@
 		CE9715DC2B7D7618002C6CD0 /* Inter-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE9715CB2B7D7618002C6CD0 /* Inter-Thin.ttf */; };
 		CE9715E12B7D7945002C6CD0 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9715E02B7D7945002C6CD0 /* UIFont.swift */; };
 		CE9715E22B7D7945002C6CD0 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9715E02B7D7945002C6CD0 /* UIFont.swift */; };
+		CECC8D7E2B804B0C0027065D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECC8D7D2B804B0C0027065D /* User.swift */; };
+		CECC8D822B804E4B0027065D /* User.json in Resources */ = {isa = PBXBuildFile; fileRef = CECC8D812B804E4B0027065D /* User.json */; };
+		CECC8D872B8055390027065D /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECC8D862B8055390027065D /* UIStoryboard.swift */; };
+		CECC8D892B8055960027065D /* enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECC8D882B8055960027065D /* enum.swift */; };
 		D64DAFABC4DB46914B5D677D /* Pods_iOS__Photo_Cropper_iOS__Photo_CropperUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A458EB39872AFB32920E4640 /* Pods_iOS__Photo_Cropper_iOS__Photo_CropperUITests.framework */; };
 		DA6C64885D5F0DEC71A3F935 /* Pods_iOS__Photo_Cropper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D939B5B305485D34DCE0DEC /* Pods_iOS__Photo_Cropper.framework */; };
 /* End PBXBuildFile section */
@@ -120,6 +124,10 @@
 		CE9715CA2B7D7618002C6CD0 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
 		CE9715CB2B7D7618002C6CD0 /* Inter-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Thin.ttf"; sourceTree = "<group>"; };
 		CE9715E02B7D7945002C6CD0 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		CECC8D7D2B804B0C0027065D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CECC8D812B804E4B0027065D /* User.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = User.json; sourceTree = "<group>"; };
+		CECC8D862B8055390027065D /* UIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
+		CECC8D882B8055960027065D /* enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = enum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,14 +229,14 @@
 		CE97158E2B7D3AEE002C6CD0 /* iOS _Photo Cropper */ = {
 			isa = PBXGroup;
 			children = (
-				CE97158F2B7D3AEE002C6CD0 /* AppDelegate.swift */,
-				CE9715982B7D3AF0002C6CD0 /* Assets.xcassets */,
-				CE9715912B7D3AEE002C6CD0 /* SceneDelegate.swift */,
-				CE97159D2B7D3AF0002C6CD0 /* Info.plist */,
+				CECC8D852B8055230027065D /* Constants */,
 				CE6273312B7F38DE00439B40 /* Cell */,
 				CE6272C02B7EA1A300439B40 /* Controller */,
 				CE9715DF2B7D7933002C6CD0 /* Extension */,
 				CE9715BF2B7D75F3002C6CD0 /* Font */,
+				CE97159D2B7D3AF0002C6CD0 /* Info.plist */,
+				CECC8D7F2B804E120027065D /* Model */,
+				CECC8D802B804E280027065D /* Resource */,
 				CECC8D7B2B80117E0027065D /* View */,
 				CE97167F2B7E8860002C6CD0 /* Yml */,
 			);
@@ -272,7 +280,6 @@
 		CE9715DF2B7D7933002C6CD0 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				CE62731D2B7F279B00439B40 /* DeepLabV3.mlmodel */,
 				CE9715E02B7D7945002C6CD0 /* UIFont.swift */,
 				CE6272BD2B7EA12A00439B40 /* UIImage.swift */,
 				CE62733C2B7F469D00439B40 /* UIcolor.swift */,
@@ -296,6 +303,35 @@
 				CE97159A2B7D3AF0002C6CD0 /* LaunchScreen.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		CECC8D7F2B804E120027065D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CECC8D7D2B804B0C0027065D /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CECC8D802B804E280027065D /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				CE97158F2B7D3AEE002C6CD0 /* AppDelegate.swift */,
+				CE9715982B7D3AF0002C6CD0 /* Assets.xcassets */,
+				CE9715912B7D3AEE002C6CD0 /* SceneDelegate.swift */,
+				CE62731D2B7F279B00439B40 /* DeepLabV3.mlmodel */,
+				CECC8D812B804E4B0027065D /* User.json */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		CECC8D852B8055230027065D /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				CECC8D862B8055390027065D /* UIStoryboard.swift */,
+				CECC8D882B8055960027065D /* enum.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -421,6 +457,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CECC8D822B804E4B0027065D /* User.json in Resources */,
 				CE9715CE2B7D7618002C6CD0 /* Inter-Bold.ttf in Resources */,
 				CE6273072B7EF0EA00439B40 /* openapi.yaml in Resources */,
 				CE9715C12B7D760B002C6CD0 /* Inter-VariableFont_slnt,wght.ttf in Resources */,
@@ -585,7 +622,10 @@
 				CE6273402B7FC75600439B40 /* ProgressViewController.swift in Sources */,
 				CE6272C22B7EA1B400439B40 /* CropViewController.swift in Sources */,
 				CE9715902B7D3AEE002C6CD0 /* AppDelegate.swift in Sources */,
+				CECC8D892B8055960027065D /* enum.swift in Sources */,
 				CE62733A2B7F395400439B40 /* PhotoSelectorViewController.swift in Sources */,
+				CECC8D872B8055390027065D /* UIStoryboard.swift in Sources */,
+				CECC8D7E2B804B0C0027065D /* User.swift in Sources */,
 				CE6273382B7F393B00439B40 /* ProfileViewController.swift in Sources */,
 				CE6273362B7F390A00439B40 /* ImageCollectionViewCell.swift in Sources */,
 				CE6273332B7F38F800439B40 /* CameraCollectionViewCell.swift in Sources */,

@@ -10,8 +10,8 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
     @IBAction func editProfilePressed(_ sender: UIButton) {
-        let storyboard  = UIStoryboard(name: "Main", bundle: nil)
-        if let NVC = storyboard.instantiateViewController(withIdentifier: "CropNVC") as? UINavigationController,
+        let storyboard  = StoryboardFactory.Main
+        if let NVC = storyboard.instantiateViewController(withIdentifier: AppConstant.ViewControllerID.cropNV) as? UINavigationController,
            let DVC = NVC.topViewController as? CropViewController {
             NVC.modalPresentationStyle = .fullScreen
             DVC.originalImage = profileImageView.image
@@ -19,16 +19,17 @@ class ProfileViewController: UIViewController {
         }
     }
     @IBAction func addPressed(_ sender: UIButton) {
-    
-        let storyboard  = UIStoryboard(name: "Main", bundle: nil)
-        if let DVC = storyboard.instantiateViewController(withIdentifier: "AddPhotoVC") as? PhotoSelectorViewController {
+        let storyboard  = StoryboardFactory.Main
+        if let DVC = storyboard.instantiateViewController(withIdentifier: AppConstant.ViewControllerID.addPhoto) as? PhotoSelectorViewController {
             DVC.currentImage = profileImageView.image
             self.navigationController?.pushViewController(DVC, animated: true)
         }
     }
+    var user:User?
     override func viewDidLoad() {
         super.viewDidLoad()
-        profileImageView.image = UIImage(named: "profileImage")
+        user = getUser()
+        setUserInfo(user: user)
         profileImageView.layer.cornerRadius = profileImageView.frame.width / 2
         editProfileButton.layer.borderWidth = 1.0
         editProfileButton.layer.borderColor = UIColor.buttonBorderGray.cgColor
@@ -50,5 +51,24 @@ class ProfileViewController: UIViewController {
         phoneLabel.textColor = .nameBlack
         
     }
-
+    
+    func setUserInfo(user u:User?){
+        guard let user = u else {return}
+        profileImageView.image = UIImage(named: user.profilePhoto)
+        nameLabel.text = user.name
+        jobLabel.text = user.job
+        membershipLabel.text = user.membership
+        locationLabel.text = "Location " + (user.location ?? "N/A")
+        phoneLabel.text = user.location
+    }
+    func getUser()-> User? {
+        if let path = Bundle.main.path(forResource: "User", ofType: "json"), let data = NSData(contentsOfFile: path) as Data? {
+            
+            do {
+                return try? JSONDecoder().decode(User.self, from: data)
+            }
+        }
+        return nil
+    }
+    
 }

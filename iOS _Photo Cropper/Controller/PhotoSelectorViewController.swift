@@ -34,8 +34,8 @@ extension PhotoSelectorViewController: UICollectionViewDelegate, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard indexPath.row > 0 else {return}
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let DVC = storyboard.instantiateViewController(withIdentifier: "CropVC") as? CropViewController {
+        let storyboard = StoryboardFactory.Main
+        if let DVC = storyboard.instantiateViewController(withIdentifier: AppConstant.ViewControllerID.crop) as? CropViewController {
             DVC.originalImage = viewModel[indexPath.row - 1]
             navigationController?.pushViewController(DVC, animated: true)
         }

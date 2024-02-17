@@ -1,7 +1,8 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-
+    var user:User?
+    
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var editProfileButton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
@@ -25,7 +26,7 @@ class ProfileViewController: UIViewController {
             self.navigationController?.pushViewController(DVC, animated: true)
         }
     }
-    var user:User?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         user = getUser()

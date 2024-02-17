@@ -1,8 +1,12 @@
 import UIKit
-import Foundation
-import BackgroundRemoval
-class CropViewController: UIViewController {
 
+class CropViewController: UIViewController {
+   
+    var circleHeight = CGFloat(300)
+    var originalImage: UIImage?
+    let sampleMask = UIView()
+    var removeBackground = false
+    
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var profileImageView: UIImageView!
@@ -15,6 +19,7 @@ class CropViewController: UIViewController {
         circleHeight = CGFloat(sender.value)
         sampleMask.layer.mask = getMaskLayer()
     }
+    
     @IBAction func uploadPressed(_ sender: UIButton) {
         let storyboard = StoryboardFactory.Main
         if let DVC = storyboard.instantiateViewController(withIdentifier: AppConstant.ViewControllerID.progress) as? ProgressViewController {
@@ -29,23 +34,21 @@ class CropViewController: UIViewController {
             self.navigationController?.popViewController(animated: true)
         }
     }
+
     @IBAction func closePressed(_ sender: UIButton) {
         dismiss(animated: true) {
             self.navigationController?.popViewController(animated: true)
         }
     }
+
     @IBAction func rotatePhoto(_ sender: UIButton) {
         self.profileImageView.image = self.profileImageView.image?.rotate(radians: .pi / 2)
     }
     
-    
     @IBAction func removeBackgroundSwitch(_ sender: UISwitch) {
         removeBackground = sender.isOn
     }
-    var circleHeight = CGFloat(300)
-    var originalImage: UIImage?
-    let sampleMask = UIView()
-    var removeBackground = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         profileImageView.image = originalImage
@@ -55,6 +58,9 @@ class CropViewController: UIViewController {
         titleLabel.text = "Edit headshot"
         titleLabel.textColor = .titleBlack
         titleLabel.font = .CustomFont(weight: .semiBold, size: 18)
+        radiusSlider.minimumValue = 50
+        radiusSlider.maximumValue = Float(profileImageView.frame.size.width)
+        radiusSlider.setValue(Float(circleHeight), animated: false)
         radiusSlider.maximumTrackTintColor = .borderGray
         radiusSlider.minimumTrackTintColor = .themeBlue
         rotateButton.setTitleColor(.buttonBlack, for: [])
@@ -72,7 +78,7 @@ class CropViewController: UIViewController {
         cancelButton.layer.cornerRadius = 8.0
     }
 
-    func getPath(circleHeight: CGFloat = CGFloat(300))->UIBezierPath {
+    func getPath(circleHeight: CGFloat)->UIBezierPath {
         let circleRect = CGRect(x:sampleMask.center.x - circleHeight / 2, y:sampleMask.center.y - circleHeight / 2, width: circleHeight, height: circleHeight)
         let circlePath = UIBezierPath(ovalIn: circleRect)
         return circlePath

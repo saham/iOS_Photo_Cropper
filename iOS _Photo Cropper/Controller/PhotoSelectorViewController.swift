@@ -2,18 +2,19 @@ import UIKit
 import AVFoundation
 
 class PhotoSelectorViewController: UIViewController {
-
-    @IBOutlet weak var photoCollectionView: UICollectionView!
     var viewModel: [UIImage?] = []
     var currentImage:UIImage?
+    
+    @IBOutlet weak var photoCollectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.append(currentImage)
         photoCollectionView.delegate = self
         photoCollectionView.dataSource = self
-        
     }
 }
+
 extension PhotoSelectorViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

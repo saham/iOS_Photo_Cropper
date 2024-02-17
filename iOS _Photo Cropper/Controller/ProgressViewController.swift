@@ -1,17 +1,19 @@
 import UIKit
 import BackgroundRemoval
-class ProgressViewController: UIViewController {
 
+class ProgressViewController: UIViewController {
+    
+    var imageToUpload:UIImage?
+    var timer = Timer()
+    var progressValue = 0
+    var removeBackground = false
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var progressSlider: UIProgressView!
     @IBOutlet weak var progressLabel: UILabel!
     @IBOutlet weak var progressImageView: UIImageView!
     @IBOutlet weak var statusLabel: UILabel!
     
-    var imageToUpload:UIImage?
-    var timer = Timer()
-    var progressValue = 0
-    var removeBackground = false
     override func viewDidLoad() {
         super.viewDidLoad()
         titleLabel.textColor = .textBlack
@@ -28,6 +30,7 @@ class ProgressViewController: UIViewController {
         timer = Timer.scheduledTimer(timeInterval:0.01, target:self, selector:#selector(timerProgress), userInfo: nil, repeats: true)
         progressImageView.image = imageToUpload
     }
+
     @objc func timerProgress() {
         /* Just to simulate network delay in removing background
         It takes 1 seconds then background is removed

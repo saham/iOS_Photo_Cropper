@@ -2,11 +2,13 @@ import UIKit
 
 class CropViewController: UIViewController {
    
+    // MARK: - Variables
     var circleHeight = CGFloat(300)
     var originalImage: UIImage?
     let sampleMask = UIView()
     var removeBackground = false
     
+    // MARK: - Outlets
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var profileImageView: UIImageView!
@@ -15,6 +17,8 @@ class CropViewController: UIViewController {
     @IBOutlet weak var uploadButton: UIButton!
     @IBOutlet weak var removeBackgroundLabel: UILabel!
     @IBOutlet weak var rotateButton: UIButton!
+    
+    // MARK: - Actions
     @IBAction func sliderChanged(_ sender: UISlider) {
         circleHeight = CGFloat(sender.value)
         sampleMask.layer.mask = getMaskLayer()
@@ -49,6 +53,7 @@ class CropViewController: UIViewController {
         removeBackground = sender.isOn
     }
     
+    // MARK: - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         profileImageView.image = originalImage
@@ -77,7 +82,8 @@ class CropViewController: UIViewController {
         cancelButton.setTitle("Cancel", for: [])
         cancelButton.layer.cornerRadius = AppConstant.Number.cornerRadius
     }
-
+    
+    // MARK: - Mask Layer
     func getPath(circleHeight: CGFloat)->UIBezierPath {
         let circleRect = CGRect(x:sampleMask.center.x - circleHeight / 2, y:sampleMask.center.y - circleHeight / 2, width: circleHeight, height: circleHeight)
         let circlePath = UIBezierPath(ovalIn: circleRect)
@@ -90,7 +96,6 @@ class CropViewController: UIViewController {
         let plusImageView = UIImageView(image: UIImage(named: "plusWhite"))
         plusImageView.frame = CGRect(x: (view.frame.size.width - 21) / 2, y: (view.frame.size.width - 21) / 2, width: 20, height: 20)
         profileImageView.addSubview(plusImageView)
-        
         profileImageView.addSubview(sampleMask)
         let maskLayer = CALayer()
         let circleLayer = CAShapeLayer()
@@ -103,10 +108,10 @@ class CropViewController: UIViewController {
         circleLayer.borderColor = UIColor.white.withAlphaComponent(1).cgColor
         circleLayer.borderWidth = AppConstant.Number.borderWidth
         maskLayer.addSublayer(circleLayer)
-        
-        
         return maskLayer
     }
+    
+    // MARK: - Crop Image
     func getCroppedImage(from image:UIImage?)->UIImage? {
         let cropRect = CGRect(x:sampleMask.center.x - circleHeight / 2, y:sampleMask.center.y - circleHeight / 2, width: circleHeight, height: circleHeight)
         if let croppedCGImage = profileImageView.image?.cgImage?.cropping(to: cropRect){
@@ -115,4 +120,3 @@ class CropViewController: UIViewController {
         return nil
     }
 }
-

@@ -1,8 +1,11 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
+   
+    // MARK: - Variables
     var user:User?
-    
+   
+    // MARK: - Outlets
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var editProfileButton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
@@ -10,6 +13,8 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var membershipLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
+    
+    // MARK: - Actions
     @IBAction func editProfilePressed(_ sender: UIButton) {
         let storyboard  = StoryboardFactory.Main
         if let NVC = storyboard.instantiateViewController(withIdentifier: AppConstant.ViewControllerID.cropNV) as? UINavigationController,
@@ -19,6 +24,7 @@ class ProfileViewController: UIViewController {
             present(NVC, animated: true)
         }
     }
+    
     @IBAction func addPressed(_ sender: UIButton) {
         let storyboard  = StoryboardFactory.Main
         if let DVC = storyboard.instantiateViewController(withIdentifier: AppConstant.ViewControllerID.addPhoto) as? PhotoSelectorViewController {
@@ -27,6 +33,7 @@ class ProfileViewController: UIViewController {
         }
     }
     
+    // MARK: - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         user = getUser()
@@ -51,9 +58,9 @@ class ProfileViewController: UIViewController {
         locationLabel.textColor = .nameBlack
         phoneLabel.font = .CustomFont(weight: .light, size: 14)
         phoneLabel.textColor = .nameBlack
-        
     }
     
+    // MARK: - Set user
     func setUserInfo(user u:User?){
         guard let user = u else {return}
         profileImageView.image = UIImage(named: user.profile)
@@ -63,14 +70,14 @@ class ProfileViewController: UIViewController {
         locationLabel.text = "Location " + (user.location ?? "N/A")
         phoneLabel.text = user.phone
     }
+    
+    // MARK: - Fetch User
     func getUser()-> User? {
         if let path = Bundle.main.path(forResource: "User", ofType: "json"), let data = NSData(contentsOfFile: path) as Data? {
-            
             do {
                 return try? JSONDecoder().decode(User.self, from: data)
             }
         }
         return nil
     }
-    
 }

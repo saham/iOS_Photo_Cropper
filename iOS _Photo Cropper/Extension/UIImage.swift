@@ -1,6 +1,4 @@
-import Foundation
 import UIKit
-
 
 extension UIImage {
     func rotate(radians: CGFloat) -> UIImage {
@@ -21,7 +19,6 @@ extension UIImage {
         }
         return self
     }
-    
 }
 
 

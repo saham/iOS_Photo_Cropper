@@ -1,5 +1,3 @@
-import Foundation
-
 enum AppConstant {
     enum ViewControllerID {
         static let crop = "CropVC"

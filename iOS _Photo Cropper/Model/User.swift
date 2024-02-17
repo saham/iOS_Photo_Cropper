@@ -1,4 +1,3 @@
-import Foundation
 struct User:Decodable {
     enum CodingKeys: String, CodingKey {
         case name

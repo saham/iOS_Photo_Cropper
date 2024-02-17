@@ -2,11 +2,15 @@ import UIKit
 import AVFoundation
 
 class PhotoSelectorViewController: UIViewController {
+    
+    // MARK: -  Variables
     var viewModel: [UIImage?] = []
     var currentImage:UIImage?
     
+    // MARK: - Outlet
     @IBOutlet weak var photoCollectionView: UICollectionView!
     
+    // MARK: - View LifCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.append(currentImage)
@@ -15,6 +19,7 @@ class PhotoSelectorViewController: UIViewController {
     }
 }
 
+// MARK: - CollectionView
 extension PhotoSelectorViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -43,29 +48,7 @@ extension PhotoSelectorViewController: UICollectionViewDelegate, UICollectionVie
         
     }
 }
-extension PhotoSelectorViewController: cameraDelegate {
-    func cameraButtonPressed() {
-        if UIImagePickerController.isSourceTypeAvailable(.camera){
-            let picker = UIImagePickerController()
-            picker.sourceType = .photoLibrary
-            picker.delegate = self
-            picker.allowsEditing = true
-            present(picker, animated: true, completion: nil)
-        }
-    }
 
-}
-extension PhotoSelectorViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let image = info[.editedImage] as? UIImage {
-            viewModel.append(image)
-        } else if let image = info[.originalImage] as? UIImage {
-            viewModel.append(image)
-        }
-        photoCollectionView.reloadData()
-        self.dismiss(animated: true)
-    }
-}
 extension PhotoSelectorViewController:UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width / 3, height: collectionView.frame.size.width / 3)
@@ -77,3 +60,29 @@ extension PhotoSelectorViewController:UICollectionViewDelegateFlowLayout {
         return 0.0
     }
 }
+
+// MARK: - Delegate
+extension PhotoSelectorViewController: cameraDelegate {
+    func cameraButtonPressed() {
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
+            let picker = UIImagePickerController()
+            picker.sourceType = .photoLibrary
+            picker.delegate = self
+            picker.allowsEditing = true
+            present(picker, animated: true, completion: nil)
+        }
+    }
+}
+// MARK: - Image Picker
+extension PhotoSelectorViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[.editedImage] as? UIImage {
+            viewModel.append(image)
+        } else if let image = info[.originalImage] as? UIImage {
+            viewModel.append(image)
+        }
+        photoCollectionView.reloadData()
+        self.dismiss(animated: true)
+    }
+}
+

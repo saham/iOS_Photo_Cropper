@@ -54,7 +54,7 @@ class CropViewController: UIViewController {
         profileImageView.image = originalImage
         sampleMask.layer.mask = getMaskLayer()
         topView.backgroundColor = .backgroundGray
-        topView.layer.cornerRadius = 8.0
+        topView.layer.cornerRadius = AppConstant.Number.cornerRadius
         titleLabel.text = "Edit headshot"
         titleLabel.textColor = .titleBlack
         titleLabel.font = .CustomFont(weight: .semiBold, size: 18)
@@ -68,14 +68,14 @@ class CropViewController: UIViewController {
         uploadButton.setTitleColor(.white, for: [])
         uploadButton.titleLabel?.font = .CustomFont(weight: .semiBold, size: 16)
         uploadButton.setTitle("Upload headshot", for: [])
-        uploadButton.layer.cornerRadius = 8.0
+        uploadButton.layer.cornerRadius = AppConstant.Number.cornerRadius
         cancelButton.layer.borderColor = UIColor.buttonBorderGray.cgColor
-        cancelButton.layer.borderWidth = 1.0
+        cancelButton.layer.borderWidth = AppConstant.Number.borderWidth
         cancelButton.backgroundColor = .white
         cancelButton.setTitleColor(.textBlack, for: [])
         cancelButton.titleLabel?.font = .CustomFont(weight: .semiBold, size: 16)
         cancelButton.setTitle("Cancel", for: [])
-        cancelButton.layer.cornerRadius = 8.0
+        cancelButton.layer.cornerRadius = AppConstant.Number.cornerRadius
     }
 
     func getPath(circleHeight: CGFloat)->UIBezierPath {
@@ -101,7 +101,7 @@ class CropViewController: UIViewController {
         finalPath.append(circlePath.reversing())
         circleLayer.path = finalPath.cgPath
         circleLayer.borderColor = UIColor.white.withAlphaComponent(1).cgColor
-        circleLayer.borderWidth = 1
+        circleLayer.borderWidth = AppConstant.Number.borderWidth
         maskLayer.addSublayer(circleLayer)
         
         

@@ -6,7 +6,7 @@ struct User:Decodable {
         case membership
         case location
         case phone
-        case profilePhoto
+        case profile
     }
     
     init(from decoder: Decoder) throws {
@@ -16,13 +16,13 @@ struct User:Decodable {
         self.membership = try container.decode(String.self, forKey: .membership)
         self.location = try container.decodeIfPresent(String.self, forKey: .location)
         self.phone = try container.decode(String.self, forKey: .phone)
-        self.profilePhoto = try container.decode(String.self, forKey: .profilePhoto)
+        self.profile = try container.decode(String.self, forKey: .profile)
     }
     var name:String
     var job:String
     var membership:String
     var location:String?
     var phone:String
-    var profilePhoto:String
+    var profile:String
 }
 

@@ -32,9 +32,9 @@ class ProfileViewController: UIViewController {
         user = getUser()
         setUserInfo(user: user)
         profileImageView.layer.cornerRadius = profileImageView.frame.width / 2
-        editProfileButton.layer.borderWidth = 1.0
+        editProfileButton.layer.borderWidth = AppConstant.Number.borderWidth
         editProfileButton.layer.borderColor = UIColor.buttonBorderGray.cgColor
-        editProfileButton.layer.cornerRadius = 10.0
+        editProfileButton.layer.cornerRadius = AppConstant.Number.cornerRadius
         editProfileButton.setTitleColor(.textBlack, for: [])
         nameLabel.font = .CustomFont(fontFamily: .Inter, weight: .bold, size: 18)
         nameLabel.textColor = .nameBlack
@@ -42,10 +42,11 @@ class ProfileViewController: UIViewController {
         jobLabel.textColor = .nameBlack
         membershipLabel.font = .CustomFont(weight: .light, size: 14)
         membershipLabel.textColor = .textBlack
-        membershipLabel.layer.cornerRadius = jobLabel.frame.size.height / 2
+        membershipLabel.layer.cornerRadius = membershipLabel.frame.size.height / 2
         membershipLabel.backgroundColor = .backgroundGray
+        membershipLabel.clipsToBounds = true
         membershipLabel.layer.borderColor = UIColor.borderGray.cgColor
-        membershipLabel.layer.borderWidth = 2.0
+        membershipLabel.layer.borderWidth = AppConstant.Number.borderWidth
         locationLabel.font = .CustomFont(weight: .light, size: 14)
         locationLabel.textColor = .nameBlack
         phoneLabel.font = .CustomFont(weight: .light, size: 14)
@@ -55,7 +56,7 @@ class ProfileViewController: UIViewController {
     
     func setUserInfo(user u:User?){
         guard let user = u else {return}
-        profileImageView.image = UIImage(named: user.profilePhoto)
+        profileImageView.image = UIImage(named: user.profile)
         nameLabel.text = user.name
         jobLabel.text = user.job
         membershipLabel.text = user.membership

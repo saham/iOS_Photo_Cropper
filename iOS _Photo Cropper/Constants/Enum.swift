@@ -14,6 +14,10 @@ enum AppConstant {
         static let camera = "camera"
         static let image = "image"
     }
+    enum Number {
+        static let cornerRadius = 8.0
+        static let borderWidth = 1.0
+    }
 }
 enum FontFamily:String {
     case  Inter = "Inter"

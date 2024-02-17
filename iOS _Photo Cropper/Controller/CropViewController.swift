@@ -7,7 +7,7 @@ class CropViewController: UIViewController {
     var originalImage: UIImage?
     let sampleMask = UIView()
     var removeBackground = false
-    
+    var plusSignWidth = 21.0
     // MARK: - Outlets
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -85,7 +85,10 @@ class CropViewController: UIViewController {
     
     // MARK: - Mask Layer
     func getPath(circleHeight: CGFloat)->UIBezierPath {
-        let circleRect = CGRect(x:sampleMask.center.x - circleHeight / 2, y:sampleMask.center.y - circleHeight / 2, width: circleHeight, height: circleHeight)
+        let circleRect = CGRect(x: sampleMask.center.x - circleHeight / 2,
+                                y: sampleMask.center.y - circleHeight / 2, 
+                                width: circleHeight,
+                                height: circleHeight)
         let circlePath = UIBezierPath(ovalIn: circleRect)
         return circlePath
     }
@@ -94,14 +97,24 @@ class CropViewController: UIViewController {
         sampleMask.frame = CGRect(origin: .zero, size: CGSize(width: view.frame.width, height: view.frame.width))
         sampleMask.backgroundColor =  UIColor.black.withAlphaComponent(0.6)
         let plusImageView = UIImageView(image: UIImage(named: "plusWhite"))
-        plusImageView.frame = CGRect(x: (view.frame.size.width - 21) / 2, y: (view.frame.size.width - 21) / 2, width: 20, height: 20)
+        plusImageView.frame = CGRect(x: (view.frame.size.width - plusSignWidth) / 2,
+                                     y: (view.frame.size.width - plusSignWidth) / 2,
+                                     width: plusSignWidth,
+                                     height: plusSignWidth)
         profileImageView.addSubview(plusImageView)
         profileImageView.addSubview(sampleMask)
         let maskLayer = CALayer()
         let circleLayer = CAShapeLayer()
-        let finalPath = UIBezierPath(roundedRect: CGRect(x:0 , y:0, width: sampleMask.frame.size.width,height: sampleMask.frame.size.height), cornerRadius: 0)
+        let finalPath = UIBezierPath(roundedRect: CGRect(x:0 , 
+                                                         y:0,
+                                                         width: sampleMask.frame.size.width,
+                                                         height: sampleMask.frame.size.height), 
+                                     cornerRadius: 0)
         maskLayer.frame = sampleMask.bounds
-        circleLayer.frame = CGRect(x:0 , y:0, width: sampleMask.frame.size.width,height: sampleMask.frame.size.height)
+        circleLayer.frame = CGRect(x: 0 ,
+                                   y: 0,
+                                   width: sampleMask.frame.size.width,
+                                   height: sampleMask.frame.size.height)
         let circlePath = getPath(circleHeight: circleHeight)
         finalPath.append(circlePath.reversing())
         circleLayer.path = finalPath.cgPath
@@ -113,7 +126,10 @@ class CropViewController: UIViewController {
     
     // MARK: - Crop Image
     func getCroppedImage(from image:UIImage?)->UIImage? {
-        let cropRect = CGRect(x:sampleMask.center.x - circleHeight / 2, y:sampleMask.center.y - circleHeight / 2, width: circleHeight, height: circleHeight)
+        let cropRect = CGRect(x: sampleMask.center.x - circleHeight / 2, 
+                              y: sampleMask.center.y - circleHeight / 2,
+                              width: circleHeight,
+                              height: circleHeight)
         if let croppedCGImage = profileImageView.image?.cgImage?.cropping(to: cropRect){
             return UIImage(cgImage: croppedCGImage)
         }

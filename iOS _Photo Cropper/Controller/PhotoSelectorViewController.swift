@@ -10,12 +10,18 @@ class PhotoSelectorViewController: UIViewController {
     // MARK: - Outlet
     @IBOutlet weak var photoCollectionView: UICollectionView!
     
-    // MARK: - View LifCycle
+    // MARK: - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.append(currentImage)
         photoCollectionView.delegate = self
         photoCollectionView.dataSource = self
+        let backButton = UIBarButtonItem(image: UIImage(systemName: "chevron.backward"), style: .plain, target: self, action:  #selector(backPressed))
+        self.navigationItem.leftBarButtonItem  = backButton
+    }
+    
+    @objc func backPressed() {
+        navigationController?.popViewController(animated: true)
     }
 }
 
@@ -40,12 +46,14 @@ extension PhotoSelectorViewController: UICollectionViewDelegate, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard indexPath.row > 0 else {return}
-        let storyboard = StoryboardFactory.Main
-        if let DVC = storyboard.instantiateViewController(withIdentifier: AppConstant.ViewControllerID.crop) as? CropViewController {
+        // Headshot Editor Screen does not have Back Button. Navigation is done modally
+        let storyboard  = StoryboardFactory.Main
+        if let NVC = storyboard.instantiateViewController(withIdentifier: AppConstant.ViewControllerID.cropNV) as? UINavigationController,
+           let DVC = NVC.topViewController as? CropViewController {
+            NVC.modalPresentationStyle = .fullScreen
             DVC.originalImage = viewModel[indexPath.row - 1]
-            navigationController?.pushViewController(DVC, animated: true)
+            present(NVC, animated: true)
         }
-        
     }
 }
 

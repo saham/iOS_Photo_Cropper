@@ -22,11 +22,11 @@ enum AppConstant {
     }
 }
 
-enum FontFamily:String {
+enum FontFamily: String {
     case  Inter = "Inter"
 }
 
-enum FontWeight:String {
+enum FontWeight: String {
     case black = "Black"
     case bold = "bold"
     case extraBold = "ExtraBold"

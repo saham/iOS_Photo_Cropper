@@ -4,7 +4,7 @@ import BackgroundRemoval
 class ProgressViewController: UIViewController {
     
     // MARK: - Variables
-    var imageToUpload:UIImage?
+    var imageToUpload: UIImage?
     var timer = Timer()
     var progressValue = 0
     var removeBackground = false
@@ -22,7 +22,7 @@ class ProgressViewController: UIViewController {
         titleLabel.textColor = .textBlack
         titleLabel.font = .CustomFont(weight: .bold, size: 18)
         titleLabel.text = "Take a sip.."
-        progressImageView.layer.cornerRadius = progressImageView.frame.size.width / 2
+        progressImageView.isCircle = true
         progressLabel.text = ""
         progressSlider.setProgress(0.0, animated: false)
         progressLabel.textColor = .textBlack

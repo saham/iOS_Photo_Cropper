@@ -8,6 +8,7 @@ class CropViewController: UIViewController {
     let sampleMask = UIView()
     var removeBackground = false
     var plusSignWidth = 21.0
+    
     // MARK: - Outlets
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -84,7 +85,7 @@ class CropViewController: UIViewController {
     }
     
     // MARK: - Mask Layer
-    func getPath(circleHeight: CGFloat)->UIBezierPath {
+    func getPath(circleHeight: CGFloat) -> UIBezierPath {
         let circleRect = CGRect(x: sampleMask.center.x - circleHeight / 2,
                                 y: sampleMask.center.y - circleHeight / 2, 
                                 width: circleHeight,
@@ -93,7 +94,7 @@ class CropViewController: UIViewController {
         return circlePath
     }
     
-    func getMaskLayer()->CALayer {
+    func getMaskLayer() -> CALayer {
         sampleMask.frame = CGRect(origin: .zero, size: CGSize(width: view.frame.width, height: view.frame.width))
         sampleMask.backgroundColor =  UIColor.black.withAlphaComponent(0.6)
         let plusImageView = UIImageView(image: UIImage(named: "plusWhite"))
@@ -125,8 +126,8 @@ class CropViewController: UIViewController {
     }
     
     // MARK: - Crop Image
-    func getCroppedImage(from image:UIImage?)->UIImage? {
-        let cropRect = CGRect(x: sampleMask.center.x - circleHeight / 2, 
+    func getCroppedImage(from image:UIImage?) -> UIImage? {
+        let cropRect = CGRect(x: sampleMask.center.x - circleHeight / 2,
                               y: sampleMask.center.y - circleHeight / 2,
                               width: circleHeight,
                               height: circleHeight)

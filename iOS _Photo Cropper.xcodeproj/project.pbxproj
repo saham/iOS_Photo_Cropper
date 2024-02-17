@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		557DA58823EDE10436B1761E /* Pods_iOS__Photo_CropperTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C38D24A5DF1C89DF64E086 /* Pods_iOS__Photo_CropperTests.framework */; };
+		CE27F6C12B814B2200560D65 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27F6C02B814B2200560D65 /* UIView.swift */; };
 		CE6272BE2B7EA12A00439B40 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6272BD2B7EA12A00439B40 /* UIImage.swift */; };
 		CE6272C22B7EA1B400439B40 /* CropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6272C12B7EA1B400439B40 /* CropViewController.swift */; };
 		CE6273022B7EF06A00439B40 /* OpenAPIRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = CE6273012B7EF06A00439B40 /* OpenAPIRuntime */; };
@@ -90,6 +91,7 @@
 		9380EF736657607E641E5901 /* Pods-iOS _Photo Cropper-iOS _Photo CropperUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS _Photo Cropper-iOS _Photo CropperUITests.release.xcconfig"; path = "Target Support Files/Pods-iOS _Photo Cropper-iOS _Photo CropperUITests/Pods-iOS _Photo Cropper-iOS _Photo CropperUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9868E42E4FAC8A7618042199 /* Pods-iOS _Photo Cropper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS _Photo Cropper.debug.xcconfig"; path = "Target Support Files/Pods-iOS _Photo Cropper/Pods-iOS _Photo Cropper.debug.xcconfig"; sourceTree = "<group>"; };
 		A458EB39872AFB32920E4640 /* Pods_iOS__Photo_Cropper_iOS__Photo_CropperUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS__Photo_Cropper_iOS__Photo_CropperUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE27F6C02B814B2200560D65 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		CE6272BD2B7EA12A00439B40 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		CE6272C12B7EA1B400439B40 /* CropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropViewController.swift; sourceTree = "<group>"; };
 		CE6273062B7EF0EA00439B40 /* openapi.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = openapi.yaml; sourceTree = "<group>"; };
@@ -330,6 +332,7 @@
 			children = (
 				CECC8D862B8055390027065D /* UIStoryboard.swift */,
 				CECC8D882B8055960027065D /* Enum.swift */,
+				CE27F6C02B814B2200560D65 /* UIView.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -617,6 +620,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE27F6C12B814B2200560D65 /* UIView.swift in Sources */,
 				CE9715E12B7D7945002C6CD0 /* UIFont.swift in Sources */,
 				CE6272BE2B7EA12A00439B40 /* UIImage.swift in Sources */,
 				CE6273402B7FC75600439B40 /* ProgressViewController.swift in Sources */,

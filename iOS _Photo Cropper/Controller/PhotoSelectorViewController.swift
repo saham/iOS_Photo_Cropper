@@ -70,8 +70,9 @@ extension PhotoSelectorViewController:UICollectionViewDelegateFlowLayout {
 }
 
 // MARK: - Delegate
-extension PhotoSelectorViewController: cameraDelegate {
-    func cameraButtonPressed() {
+extension PhotoSelectorViewController: camera {
+
+    func cameraButtonPressed() { 
         if UIImagePickerController.isSourceTypeAvailable(.camera){
             let picker = UIImagePickerController()
             picker.sourceType = .photoLibrary
@@ -80,10 +81,12 @@ extension PhotoSelectorViewController: cameraDelegate {
             present(picker, animated: true, completion: nil)
         }
     }
-}
+} 
+
 // MARK: - Image Picker
 extension PhotoSelectorViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
         if let image = info[.editedImage] as? UIImage {
             viewModel.append(image)
         } else if let image = info[.originalImage] as? UIImage {

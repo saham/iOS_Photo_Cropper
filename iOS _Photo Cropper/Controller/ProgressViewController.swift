@@ -22,7 +22,7 @@ class ProgressViewController: UIViewController {
         progressSlider.setProgress(0.0, animated: false)
         progressLabel.textColor = .textBlack
         progressLabel.font = .CustomFont(weight: .medium, size: 14)
-        statusLabel.text = "We are currently processing your image. Background remover may take few minutes."
+        statusLabel.text = AppConstant.Texts.progress
         statusLabel.textColor = .textBlack
         statusLabel.font = .CustomFont(weight: .medium, size: 14)
         timer = Timer.scheduledTimer(timeInterval:0.01, target:self, selector:#selector(timerProgress), userInfo: nil, repeats: true)

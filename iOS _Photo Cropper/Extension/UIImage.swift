@@ -1,5 +1,7 @@
 import Foundation
 import UIKit
+
+
 extension UIImage {
     func rotate(radians: CGFloat) -> UIImage {
         let rotatedSize = CGRect(origin: .zero, size: size)
@@ -15,10 +17,8 @@ extension UIImage {
                             width: size.width, height: size.height))
             let rotatedImage = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
-
             return rotatedImage ?? self
         }
-
         return self
     }
     

@@ -45,7 +45,7 @@
 		CECC8D7E2B804B0C0027065D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECC8D7D2B804B0C0027065D /* User.swift */; };
 		CECC8D822B804E4B0027065D /* User.json in Resources */ = {isa = PBXBuildFile; fileRef = CECC8D812B804E4B0027065D /* User.json */; };
 		CECC8D872B8055390027065D /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECC8D862B8055390027065D /* UIStoryboard.swift */; };
-		CECC8D892B8055960027065D /* enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECC8D882B8055960027065D /* enum.swift */; };
+		CECC8D892B8055960027065D /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECC8D882B8055960027065D /* Enum.swift */; };
 		D64DAFABC4DB46914B5D677D /* Pods_iOS__Photo_Cropper_iOS__Photo_CropperUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A458EB39872AFB32920E4640 /* Pods_iOS__Photo_Cropper_iOS__Photo_CropperUITests.framework */; };
 		DA6C64885D5F0DEC71A3F935 /* Pods_iOS__Photo_Cropper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D939B5B305485D34DCE0DEC /* Pods_iOS__Photo_Cropper.framework */; };
 /* End PBXBuildFile section */
@@ -127,7 +127,7 @@
 		CECC8D7D2B804B0C0027065D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CECC8D812B804E4B0027065D /* User.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = User.json; sourceTree = "<group>"; };
 		CECC8D862B8055390027065D /* UIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
-		CECC8D882B8055960027065D /* enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = enum.swift; sourceTree = "<group>"; };
+		CECC8D882B8055960027065D /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -329,7 +329,7 @@
 			isa = PBXGroup;
 			children = (
 				CECC8D862B8055390027065D /* UIStoryboard.swift */,
-				CECC8D882B8055960027065D /* enum.swift */,
+				CECC8D882B8055960027065D /* Enum.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -622,7 +622,7 @@
 				CE6273402B7FC75600439B40 /* ProgressViewController.swift in Sources */,
 				CE6272C22B7EA1B400439B40 /* CropViewController.swift in Sources */,
 				CE9715902B7D3AEE002C6CD0 /* AppDelegate.swift in Sources */,
-				CECC8D892B8055960027065D /* enum.swift in Sources */,
+				CECC8D892B8055960027065D /* Enum.swift in Sources */,
 				CE62733A2B7F395400439B40 /* PhotoSelectorViewController.swift in Sources */,
 				CECC8D872B8055390027065D /* UIStoryboard.swift in Sources */,
 				CECC8D7E2B804B0C0027065D /* User.swift in Sources */,

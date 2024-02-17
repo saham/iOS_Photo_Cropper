@@ -59,7 +59,7 @@ class ProfileViewController: UIViewController {
         jobLabel.text = user.job
         membershipLabel.text = user.membership
         locationLabel.text = "Location " + (user.location ?? "N/A")
-        phoneLabel.text = user.location
+        phoneLabel.text = user.phone
     }
     func getUser()-> User? {
         if let path = Bundle.main.path(forResource: "User", ofType: "json"), let data = NSData(contentsOfFile: path) as Data? {

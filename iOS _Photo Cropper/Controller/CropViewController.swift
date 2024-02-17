@@ -81,7 +81,11 @@ class CropViewController: UIViewController {
     func getMaskLayer()->CALayer {
         sampleMask.frame = CGRect(origin: .zero, size: CGSize(width: view.frame.width, height: view.frame.width))
         sampleMask.backgroundColor =  UIColor.black.withAlphaComponent(0.6)
-        self.profileImageView.addSubview(sampleMask)
+        let plusImageView = UIImageView(image: UIImage(named: "plusWhite"))
+        plusImageView.frame = CGRect(x: (view.frame.size.width - 21) / 2, y: (view.frame.size.width - 21) / 2, width: 20, height: 20)
+        profileImageView.addSubview(plusImageView)
+        
+        profileImageView.addSubview(sampleMask)
         let maskLayer = CALayer()
         let circleLayer = CAShapeLayer()
         let finalPath = UIBezierPath(roundedRect: CGRect(x:0 , y:0, width: sampleMask.frame.size.width,height: sampleMask.frame.size.height), cornerRadius: 0)
@@ -93,6 +97,8 @@ class CropViewController: UIViewController {
         circleLayer.borderColor = UIColor.white.withAlphaComponent(1).cgColor
         circleLayer.borderWidth = 1
         maskLayer.addSublayer(circleLayer)
+        
+        
         return maskLayer
     }
     func getCroppedImage(from image:UIImage?)->UIImage? {

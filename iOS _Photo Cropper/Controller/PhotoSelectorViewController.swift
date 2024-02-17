@@ -22,11 +22,11 @@ extension PhotoSelectorViewController: UICollectionViewDelegate, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.row == 0 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "camera", for: indexPath) as! CameraCollectionViewCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AppConstant.Cell.camera, for: indexPath) as! CameraCollectionViewCell
             cell.delegate = self
             return cell
         } else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "image", for: indexPath) as! ImageCollectionViewCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AppConstant.Cell.image, for: indexPath) as! ImageCollectionViewCell
             cell.userImageView.image = viewModel[indexPath.row - 1]
             return cell
         }

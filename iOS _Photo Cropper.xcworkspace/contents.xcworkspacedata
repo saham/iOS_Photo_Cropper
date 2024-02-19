@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:iOS _Photo Cropper.xcodeproj">
+      location = "group:/Users/saham/Project/iOS_Photo_Cropper/Photo Cropper.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
